@@ -36,20 +36,32 @@ knowledge = And(
 )
 
 #print("Knowledge Formula: " +knowledge.formula())
-#check_knowledge(knowledge)
 
-# Initial cards
-knowledge.add(And(
-    Not(mustard), Not(kitchen), Not(revolver)
-))
+knowledge.add(Not(mustard))
+knowledge.add(Not(kitchen))
+knowledge.add(Not(revolver))
+knowledge.add(Not(plum))
+knowledge.add(Not(ballroom))
 
-# Unknown card
 knowledge.add(Or(
     Not(scarlet), Not(library), Not(wrench)
 ))
 
-# Known cards
-knowledge.add(Not(plum))
-knowledge.add(Not(ballroom))
-
 check_knowledge(knowledge)
+print(knowledge.formula())
+
+# # Initial cards
+# knowledge.add(And(
+#     Not(mustard), Not(kitchen), Not(revolver)
+# ))
+
+# # Unknown card
+# knowledge.add(Or(
+#     Not(scarlet), Not(library), Not(wrench)
+# ))
+
+# # Known cards
+# knowledge.add(Not(plum))
+# knowledge.add(Not(ballroom))
+
+# check_knowledge(knowledge)
