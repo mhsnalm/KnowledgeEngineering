@@ -38,9 +38,11 @@ for house in houses:
                     Implication(Symbol(f"{p1}{house}"), Not(Symbol(f"{p2}{house}")))
                 )
 
+# print(knowledge.formula())
+
 knowledge.add(
     Or(Symbol("GilderoyGryffindor"), Symbol("GilderoyRavenclaw"))
-)
+ )
 
 knowledge.add(
     Not(Symbol("PomonaSlytherin"))
